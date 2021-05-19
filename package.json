@@ -3,7 +3,7 @@
   "version": "1.0.5",
   "main": "dist/ref-line.min.js",
   "scripts": {
-    "dev": "browser-sync start --server --files='**/*.css, **/*.html, **/*.js'",
+    "dev": "npx browser-sync start --server --files='**/*.css, **/*.html, **/*.js'",
     "build": "webpack -p"
   },
   "repository": "git@github.com:think2011/RefLine.git",
