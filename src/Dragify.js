@@ -90,6 +90,7 @@
                 //     that._data.dragable = false;
                 //     return;
                 // }
+                // debugger
                 var eInfo        = that._getEventInfo(e)
                 var $parent      = that.$elem.offsetParent
                 var diffX        = eInfo.clientX - that.$elem.offsetLeft

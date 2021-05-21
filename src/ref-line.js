@@ -1,10 +1,10 @@
 let lines = {
-    xt: null,
-    xc: null,
-    xb: null,
-    yl: null,
-    yc: null,
-    yr: null,
+    xt: null, // x轴 横线 top
+    xc: null, // x轴 横线 center
+    xb: null, // x轴 横线 bottom
+    yl: null, // y轴 竖线 left
+    yc: null, // y轴 竖线 center
+    yr: null, // y轴 竖线 right
 }
 
 // 置入参考线
@@ -26,7 +26,6 @@ for (let p in lines) {
     }
     document.body.appendChild(node)
 }
-
 class RefLine {
     constructor(options = {}) {
         this.options = Object.assign({
@@ -154,5 +153,15 @@ class RefLine {
         return Math.abs(dragValue - targetValue) <= this.options.gap
     }
 }
-
-module.exports = RefLine
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = RefLine;
+}
+else {
+    if (typeof define === 'function' && define.amd) {
+        define([], function() {
+            return RefLine;
+        });
+    } else {
+        window.RefLine = RefLine;
+    }
+}

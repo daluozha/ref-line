@@ -22,13 +22,14 @@
 <div class="box" style="width:120px;top:350px; height: 20px; left:0;background: skyblue;"></div>
 
 
-<script src="./vendors/Dragify.js"></script>
-<script src="./dist/ref-line.min.js"></script>
+<script src="./src/Dragify.js"></script>
+<script src="./src/ref-line.js"></script>
 <script>
     let boxes   = Array.from(document.querySelectorAll('.box'))
     let refLine = new RefLine()
 
     boxes.forEach((item) => {
+        // debugger
         let drag = new Dragify(item)
 
         drag
